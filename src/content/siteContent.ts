@@ -1,9 +1,13 @@
 export const siteContent = {
-  siteName: "Will Moss Guitar",
-  headline: "Session guitar, loops, and texture for artists building songs in NYC and beyond.",
-  bio: "Will Moss is a guitarist based in New York City, creating tasteful guitar parts for musicians, rappers, producers, and collaborators who need the right feeling on a track.",
+  siteName: "Moss Guitar",
+  headline: "Guitar parts, loops, and texture for songs that need a human feel.",
+  bio: "Will Moss is a guitarist based in New York City, making warm, song-first guitar parts for artists, rappers, producers, and musicians who want something played with taste and intention.",
   location: "NYC",
   email: "hello@willmossguitar.com",
+  heroImage: {
+    alt: "Portrait or studio photo placeholder for Moss Guitar",
+    src: "/images/studio-photo-placeholder.svg",
+  },
   socialLinks: [
     {
       label: "Instagram",
@@ -50,12 +54,16 @@ export const siteContent = {
   ],
   photos: [
     {
-      alt: "Studio guitar setup placeholder",
-      src: "/images/studio-placeholder.svg",
+      alt: "Studio room photo placeholder",
+      src: "/images/studio-photo-placeholder.svg",
     },
     {
-      alt: "Guitar pedals placeholder",
-      src: "/images/pedals-placeholder.svg",
+      alt: "Guitar detail photo placeholder",
+      src: "/images/guitar-photo-placeholder.svg",
+    },
+    {
+      alt: "Amp or recording setup photo placeholder",
+      src: "/images/room-photo-placeholder.svg",
     },
   ],
   gear: [
@@ -73,10 +81,10 @@ export const siteContent = {
     "Remote session work with organized stems",
   ],
   seo: {
-    title: "Will Moss Guitar | NYC Session Guitarist",
+    title: "Moss Guitar | Will Moss NYC Session Guitarist",
     description:
       "Personal portfolio for Will Moss, an NYC guitarist offering session guitar parts, loops, textures, and collaboration for artists and producers.",
-    ogImage: "/images/og-placeholder.svg",
+    ogImage: "/images/og-image-placeholder.svg",
   },
 };
 

@@ -1,0 +1,9 @@
+<svg width="900" height="1125" viewBox="0 0 900 1125" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="1125" fill="#e7dbc3"/>
+  <rect x="58" y="58" width="784" height="1009" fill="#f6f0e4" stroke="#a79369" stroke-width="4"/>
+  <rect x="104" y="104" width="692" height="780" fill="#d1bd95"/>
+  <path d="M104 884L796 104" stroke="#b19b70" stroke-width="3"/>
+  <path d="M796 884L104 104" stroke="#b19b70" stroke-width="3"/>
+  <text x="450" y="960" text-anchor="middle" fill="#536845" font-family="Georgia, serif" font-size="42">guitar detail</text>
+  <text x="450" y="1010" text-anchor="middle" fill="#6d5639" font-family="Arial, sans-serif" font-size="24">replace with real photo</text>
+</svg>

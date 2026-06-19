@@ -1,9 +1,0 @@
-<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="630" fill="#08090b"/>
-  <rect x="72" y="72" width="1056" height="486" rx="28" fill="#12151b"/>
-  <path d="M280 170c86 112 92 238 20 378" stroke="#67e8f9" stroke-width="30" stroke-linecap="round"/>
-  <path d="M402 156c-44 142-20 265 72 368" stroke="#fb7185" stroke-width="24" stroke-linecap="round"/>
-  <text x="568" y="282" fill="#f5f5f4" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700">Will Moss Guitar</text>
-  <text x="572" y="358" fill="#a5f3fc" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" letter-spacing="6">NYC SESSION GUITAR</text>
-  <text x="572" y="430" fill="#d6d3d1" font-family="Arial, Helvetica, sans-serif" font-size="34">loops, texture, parts, collaboration</text>
-</svg>

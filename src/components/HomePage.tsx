@@ -3,6 +3,24 @@ import type { ReactNode } from "react";
 import { siteContent } from "@/content/siteContent";
 import { Section } from "./Section";
 
+const photoLayouts = [
+  "md:col-span-3",
+  "md:col-span-3",
+  "md:col-span-2",
+  "md:col-span-2",
+  "md:col-span-2",
+  "md:col-span-6",
+];
+
+const photoAspectRatios = [
+  "aspect-[4/3]",
+  "aspect-[4/3]",
+  "aspect-[4/3]",
+  "aspect-[4/3]",
+  "aspect-[3/4]",
+  "aspect-[16/7]",
+];
+
 function ExternalLink({
   href,
   children,
@@ -85,6 +103,7 @@ export function HomePage() {
                   width={720}
                   height={900}
                   priority
+                  style={{ objectPosition: siteContent.heroImage.position }}
                   className="aspect-[4/5] max-h-[400px] w-full object-cover"
                 />
               </div>
@@ -156,18 +175,23 @@ export function HomePage() {
       </Section>
 
       <Section eyebrow="Room tone" title="Photos / studio">
-        <div className="grid gap-5 md:grid-cols-3">
-          {siteContent.photos.map((photo) => (
+        <div className="grid gap-5 md:grid-cols-6">
+          {siteContent.photos.map((photo, index) => (
             <div
               key={photo.src}
-              className="border border-[#c4b28d] bg-[#f6f0e4] p-2"
+              className={`border border-[#c4b28d] bg-[#f6f0e4] p-2 ${
+                photoLayouts[index] ?? "md:col-span-2"
+              }`}
             >
               <Image
                 src={photo.src}
                 alt={photo.alt}
-                width={720}
-                height={880}
-                className="aspect-[4/5] h-full w-full object-cover"
+                width={1200}
+                height={900}
+                style={{ objectPosition: photo.position }}
+                className={`h-full w-full object-cover ${
+                  photoAspectRatios[index] ?? "aspect-[4/3]"
+                }`}
               />
             </div>
           ))}

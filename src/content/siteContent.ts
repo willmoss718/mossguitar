@@ -5,8 +5,9 @@ export const siteContent = {
   location: "NYC",
   email: "hello@willmossguitar.com",
   heroImage: {
-    alt: "Portrait or studio photo placeholder for Moss Guitar",
-    src: "/images/studio-photo-placeholder.svg",
+    alt: "Will Moss playing guitar live under blue stage lights",
+    src: "/images/will-live-hero.jpg",
+    position: "center 35%",
   },
   socialLinks: [
     {
@@ -16,6 +17,10 @@ export const siteContent = {
     {
       label: "SoundCloud",
       href: "https://soundcloud.com/",
+    },
+    {
+      label: "Spotify",
+      href: "https://open.spotify.com/",
     },
     {
       label: "YouTube",
@@ -54,16 +59,34 @@ export const siteContent = {
   ],
   photos: [
     {
-      alt: "Studio room photo placeholder",
-      src: "/images/studio-photo-placeholder.svg",
+      alt: "Warm studio amp and pedal setup by a window",
+      src: "/images/studio-amp-room.jpg",
+      position: "center",
     },
     {
-      alt: "Guitar detail photo placeholder",
-      src: "/images/guitar-photo-placeholder.svg",
+      alt: "Recording desk with guitar amp, monitors, pedals, and keyboard",
+      src: "/images/recording-desk.jpg",
+      position: "center",
     },
     {
-      alt: "Amp or recording setup photo placeholder",
-      src: "/images/room-photo-placeholder.svg",
+      alt: "Will Moss playing guitar close to the crowd",
+      src: "/images/crowd-guitar-close.jpg",
+      position: "center 35%",
+    },
+    {
+      alt: "Black-and-white live show with guitarists and crowd",
+      src: "/images/live-crowd-black-white.jpg",
+      position: "center",
+    },
+    {
+      alt: "Black-and-white portrait of Will Moss playing guitar on stage",
+      src: "/images/live-portrait-black-white.jpeg",
+      position: "center 40%",
+    },
+    {
+      alt: "Black-and-white band performance with Will Moss playing guitar",
+      src: "/images/band-live-black-white.jpg",
+      position: "center",
     },
   ],
   gear: [
@@ -84,7 +107,7 @@ export const siteContent = {
     title: "Moss Guitar | Will Moss NYC Session Guitarist",
     description:
       "Personal portfolio for Will Moss, an NYC guitarist offering session guitar parts, loops, textures, and collaboration for artists and producers.",
-    ogImage: "/images/og-image-placeholder.svg",
+    ogImage: "/images/live-crowd-black-white.jpg",
   },
 };
 

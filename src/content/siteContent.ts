@@ -5,9 +5,8 @@ export const siteContent = {
   location: "NYC",
   email: "hello@willmossguitar.com",
   heroImage: {
-    alt: "Will Moss playing guitar live under blue stage lights",
-    src: "/images/will-live-hero.jpg",
-    position: "center 35%",
+    alt: "Black-and-white photo of Will Moss standing on stage with guitar",
+    src: "/images/hero-black-white-portrait.jpeg",
   },
   socialLinks: [
     {
@@ -59,34 +58,34 @@ export const siteContent = {
   ],
   photos: [
     {
-      alt: "Warm studio amp and pedal setup by a window",
-      src: "/images/studio-amp-room.jpg",
-      position: "center",
-    },
-    {
       alt: "Recording desk with guitar amp, monitors, pedals, and keyboard",
       src: "/images/recording-desk.jpg",
       position: "center",
+      shape: "wide",
     },
     {
       alt: "Will Moss playing guitar close to the crowd",
       src: "/images/crowd-guitar-close.jpg",
+      position: "center",
+      shape: "wide",
+    },
+    {
+      alt: "Will Moss playing guitar live under blue stage lights",
+      src: "/images/will-live-hero.jpg",
       position: "center 35%",
+      shape: "portrait",
     },
     {
       alt: "Black-and-white live show with guitarists and crowd",
       src: "/images/live-crowd-black-white.jpg",
       position: "center",
-    },
-    {
-      alt: "Black-and-white portrait of Will Moss playing guitar on stage",
-      src: "/images/live-portrait-black-white.jpeg",
-      position: "center 40%",
+      shape: "landscape",
     },
     {
       alt: "Black-and-white band performance with Will Moss playing guitar",
       src: "/images/band-live-black-white.jpg",
-      position: "center",
+      position: "center top",
+      shape: "feature",
     },
   ],
   gear: [

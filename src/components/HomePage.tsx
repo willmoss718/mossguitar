@@ -3,23 +3,35 @@ import type { ReactNode } from "react";
 import { siteContent } from "@/content/siteContent";
 import { Section } from "./Section";
 
-const photoLayouts = [
-  "md:col-span-3",
-  "md:col-span-3",
-  "md:col-span-2",
-  "md:col-span-2",
-  "md:col-span-2",
-  "md:col-span-6",
-];
+type PhotoShape = "feature" | "landscape" | "portrait" | "wide";
 
-const photoAspectRatios = [
-  "aspect-[4/3]",
-  "aspect-[4/3]",
-  "aspect-[4/3]",
-  "aspect-[4/3]",
-  "aspect-[3/4]",
-  "aspect-[16/7]",
-];
+function getPhotoLayout(shape?: string) {
+  switch (shape as PhotoShape) {
+    case "feature":
+      return "md:col-span-6";
+    case "portrait":
+      return "md:col-span-2";
+    case "landscape":
+      return "md:col-span-4";
+    case "wide":
+    default:
+      return "md:col-span-3";
+  }
+}
+
+function getPhotoImageClass(shape?: string) {
+  switch (shape as PhotoShape) {
+    case "feature":
+      return "aspect-[4/3]";
+    case "portrait":
+      return "aspect-[3/4]";
+    case "landscape":
+      return "aspect-[16/9]";
+    case "wide":
+    default:
+      return "aspect-[4/3]";
+  }
+}
 
 function ExternalLink({
   href,
@@ -68,7 +80,7 @@ export function HomePage() {
             </nav>
           </header>
 
-          <div className="grid gap-10 pb-8 pt-8 md:grid-cols-[1.05fr_0.95fr] md:items-end md:pb-8 md:pt-10">
+          <div className="grid gap-10 pb-8 pt-8 md:grid-cols-[0.9fr_1.1fr] md:items-center md:pb-10 md:pt-10">
             <div className="max-w-2xl">
               <p className="mb-5 text-sm font-medium text-[#6d5639]">
                 NYC session guitar / loops / texture
@@ -100,11 +112,10 @@ export function HomePage() {
                 <Image
                   src={siteContent.heroImage.src}
                   alt={siteContent.heroImage.alt}
-                  width={720}
-                  height={900}
+                  width={1220}
+                  height={1801}
                   priority
-                  style={{ objectPosition: siteContent.heroImage.position }}
-                  className="aspect-[4/5] max-h-[400px] w-full object-cover"
+                  className="h-auto w-full max-w-full md:max-h-[640px] md:w-auto"
                 />
               </div>
               <figcaption className="mt-3 text-sm text-[#6d5639]">
@@ -176,12 +187,12 @@ export function HomePage() {
 
       <Section eyebrow="Room tone" title="Photos / studio">
         <div className="grid gap-5 md:grid-cols-6">
-          {siteContent.photos.map((photo, index) => (
+          {siteContent.photos.map((photo) => (
             <div
               key={photo.src}
-              className={`border border-[#c4b28d] bg-[#f6f0e4] p-2 ${
-                photoLayouts[index] ?? "md:col-span-2"
-              }`}
+              className={`border border-[#c4b28d] bg-[#f6f0e4] p-2 ${getPhotoLayout(
+                photo.shape,
+              )}`}
             >
               <Image
                 src={photo.src}
@@ -189,9 +200,9 @@ export function HomePage() {
                 width={1200}
                 height={900}
                 style={{ objectPosition: photo.position }}
-                className={`h-full w-full object-cover ${
-                  photoAspectRatios[index] ?? "aspect-[4/3]"
-                }`}
+                className={`w-full object-cover ${getPhotoImageClass(
+                  photo.shape,
+                )}`}
               />
             </div>
           ))}

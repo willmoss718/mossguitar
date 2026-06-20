@@ -26,7 +26,7 @@ function getPhotoImageClass(shape?: string) {
     case "portrait":
       return "aspect-[3/4]";
     case "landscape":
-      return "aspect-[16/9]";
+      return "aspect-[2/1]";
     case "wide":
     default:
       return "aspect-[4/3]";
@@ -186,7 +186,7 @@ export function HomePage() {
       </Section>
 
       <Section eyebrow="Room tone" title="Photos / studio">
-        <div className="grid gap-5 md:grid-cols-6">
+        <div className="grid items-start gap-5 md:grid-cols-6">
           {siteContent.photos.map((photo) => (
             <div
               key={photo.src}

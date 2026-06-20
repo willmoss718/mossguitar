@@ -78,7 +78,7 @@ export const siteContent = {
     {
       alt: "Black-and-white live show with guitarists and crowd",
       src: "/images/live-crowd-black-white.jpg",
-      position: "center",
+      position: "center top",
       shape: "landscape",
     },
     {

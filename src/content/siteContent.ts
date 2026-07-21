@@ -1,6 +1,6 @@
 export const siteContent = {
   siteName: "Moss Guitar",
-  headline: "Guitar parts, loops, and texture for songs that need a human feel.",
+  headline: "I record guitar parts over your songs.",
   bio: "Will Moss is a born-and-raised Brooklynite recording song-first guitar parts for artists, rappers, producers, and musicians who want something played with taste and intention.",
   location: "NYC",
   email: "willmoss718@gmail.com",

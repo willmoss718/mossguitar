@@ -26,7 +26,7 @@ function getPhotoImageClass(shape?: string) {
     case "portrait":
       return "aspect-[3/4]";
     case "landscape":
-      return "aspect-[3/2]";
+      return "aspect-[8/5]";
     case "wide":
     default:
       return "aspect-[4/3]";
@@ -58,6 +58,13 @@ function ExternalLink({
 
 export function HomePage() {
   const mailHref = `mailto:${siteContent.email}`;
+  const navLinks = [
+    { label: "Demos", href: "#demos" },
+    { label: "Videos", href: "#videos" },
+    { label: "Photos", href: "#photos" },
+    { label: "Gear", href: "#gear" },
+    { label: "Contact", href: "#contact" },
+  ];
 
   return (
     <main className="min-h-screen bg-[#efe7d7] text-[#303225]">
@@ -67,20 +74,9 @@ export function HomePage() {
             <p className="font-serif text-2xl font-medium text-[#314029]">
               {siteContent.siteName}
             </p>
-            <nav className="hidden items-center gap-6 text-sm text-[#5b4c35] sm:flex">
-              <a href="#demos" className="transition hover:text-[#314029]">
-                Demos
-              </a>
-              <a href="#videos" className="transition hover:text-[#314029]">
-                Videos
-              </a>
-              <a href="#contact" className="transition hover:text-[#314029]">
-                Contact
-              </a>
-            </nav>
           </header>
 
-          <div className="grid gap-10 pb-8 pt-8 md:grid-cols-[0.9fr_1.1fr] md:items-center md:pb-10 md:pt-10">
+          <div className="grid gap-10 pb-8 pt-8 md:min-h-[calc(100vh-8.5rem)] md:grid-cols-[0.9fr_1.1fr] md:items-center md:pb-10 md:pt-6">
             <div className="max-w-2xl">
               <p className="mb-5 text-sm font-medium text-[#6d5639]">
                 NYC session guitar / loops / texture
@@ -107,18 +103,34 @@ export function HomePage() {
               </div>
             </div>
 
-            <figure className="md:justify-self-end">
-              <div className="border border-[#b9a982] bg-[#e8dcc8] p-3">
-                <Image
-                  src={siteContent.heroImage.src}
-                  alt={siteContent.heroImage.alt}
-                  width={1220}
-                  height={1801}
-                  priority
-                  className="h-auto w-full max-w-full md:max-h-[640px] md:w-auto"
-                />
-              </div>
-            </figure>
+            <div className="flex flex-col gap-4 md:-mt-8 md:justify-self-end lg:flex-row lg:items-center">
+              <figure>
+                <div className="border border-[#b9a982] bg-[#e8dcc8] p-3">
+                  <Image
+                    src={siteContent.heroImage.src}
+                    alt={siteContent.heroImage.alt}
+                    width={1220}
+                    height={1801}
+                    priority
+                    className="h-auto w-full max-w-full md:max-h-[640px] md:w-auto"
+                  />
+                </div>
+              </figure>
+              <nav
+                aria-label="Page sections"
+                className="flex flex-wrap gap-2 lg:w-28 lg:flex-col"
+              >
+                {navLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="inline-flex min-h-10 items-center justify-center rounded-full border border-[#9b8a68] bg-[#efe7d7] px-4 text-sm font-semibold text-[#4b4438] transition hover:border-[#536845] hover:bg-[#536845] hover:text-[#fbf7ed] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#536845]"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </nav>
+            </div>
           </div>
         </div>
       </section>
@@ -182,7 +194,7 @@ export function HomePage() {
         </div>
       </Section>
 
-      <Section eyebrow="Room tone" title="Photos / studio">
+      <Section id="photos" eyebrow="Room tone" title="Photos / studio">
         <div className="grid items-start gap-5 md:grid-cols-6">
           {siteContent.photos.map((photo) => (
             <div
@@ -206,7 +218,7 @@ export function HomePage() {
         </div>
       </Section>
 
-      <Section eyebrow="Recording setup" title="Gear + Recording">
+      <Section id="gear" eyebrow="Recording setup" title="Gear + Recording">
         <div className="max-w-4xl border-l-2 border-[#536845] pl-5">
           <p className="mb-5 leading-8 text-[#5a4f3f]">
             A simple remote session setup built around useful tones, clean stems,

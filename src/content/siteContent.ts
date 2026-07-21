@@ -1,9 +1,9 @@
 export const siteContent = {
   siteName: "Moss Guitar",
   headline: "Guitar parts, loops, and texture for songs that need a human feel.",
-  bio: "Will Moss is a guitarist based in New York City, making warm, song-first guitar parts for artists, rappers, producers, and musicians who want something played with taste and intention.",
+  bio: "Will Moss is a born-and-raised Brooklynite recording song-first guitar parts for artists, rappers, producers, and musicians who want something played with taste and intention.",
   location: "NYC",
-  email: "hello@willmossguitar.com",
+  email: "willmoss718@gmail.com",
   heroImage: {
     alt: "Black-and-white photo of Will Moss standing on stage with guitar",
     src: "/images/hero-black-white-portrait.jpeg",

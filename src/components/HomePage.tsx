@@ -98,7 +98,7 @@ export function HomePage() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-6 md:-mt-8 md:justify-self-end lg:grid lg:grid-cols-[auto_11rem] lg:items-center lg:gap-8 xl:gap-10">
+            <div className="flex flex-col gap-4 md:-mt-8 md:justify-self-end lg:flex-row lg:items-center">
               <figure>
                 <div className="border border-[#b9a982] bg-[#e8dcc8] p-3">
                   <Image
@@ -113,20 +113,20 @@ export function HomePage() {
               </figure>
               <nav
                 aria-label="Page sections"
-                className="flex flex-wrap gap-4 lg:w-44 lg:translate-x-4 lg:flex-col lg:gap-5 xl:translate-x-8"
+                className="flex flex-wrap gap-3 lg:w-28 lg:translate-x-20 lg:flex-col lg:gap-4 xl:translate-x-28"
               >
                 {navLinks.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
-                    className="inline-flex min-h-14 items-center justify-center rounded-full border border-[#9b8a68] bg-[#efe7d7] px-8 text-base font-semibold text-[#4b4438] transition hover:border-[#536845] hover:bg-[#536845] hover:text-[#fbf7ed] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#536845] lg:w-full"
+                    className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#9b8a68] bg-[#efe7d7] px-5 text-base font-semibold text-[#4b4438] transition hover:border-[#536845] hover:bg-[#536845] hover:text-[#fbf7ed] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#536845] lg:w-36"
                   >
                     {link.label}
                   </a>
                 ))}
                 <ContactBubble
                   email={siteContent.email}
-                  className="inline-flex min-h-14 items-center justify-center rounded-full border border-[#9b8a68] bg-[#efe7d7] px-8 text-base font-semibold text-[#4b4438] transition hover:border-[#536845] hover:bg-[#536845] hover:text-[#fbf7ed] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#536845] lg:w-full"
+                  className="inline-flex min-h-12 min-w-36 items-center justify-center rounded-full border border-[#9b8a68] bg-[#efe7d7] px-5 text-base font-semibold text-[#4b4438] transition hover:border-[#536845] hover:bg-[#536845] hover:text-[#fbf7ed] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#536845]"
                 />
               </nav>
             </div>

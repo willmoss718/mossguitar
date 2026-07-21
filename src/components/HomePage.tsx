@@ -113,7 +113,7 @@ export function HomePage() {
               </figure>
               <nav
                 aria-label="Page sections"
-                className="flex flex-wrap gap-3 lg:w-28 lg:translate-x-20 lg:flex-col lg:gap-4 xl:translate-x-28"
+                className="flex flex-wrap gap-3 lg:w-28 lg:translate-x-12 lg:flex-col lg:gap-4 xl:translate-x-16"
               >
                 {navLinks.map((link) => (
                   <a

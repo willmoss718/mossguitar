@@ -78,7 +78,7 @@ export const siteContent = {
     {
       alt: "Black-and-white live show with guitarists and crowd",
       src: "/images/live-crowd-black-white.jpg",
-      position: "center top",
+      position: "center center",
       shape: "landscape",
     },
     {
@@ -89,11 +89,38 @@ export const siteContent = {
     },
   ],
   gear: [
-    "Fender-style single coils",
-    "Humbucker rhythm tones",
-    "Pedals for chorus, delay, reverb, fuzz, and modulation",
-    "Direct recording chain for fast remote sessions",
-    "Clean DI stems plus printed effects when useful",
+    {
+      label: "Guitars",
+      details:
+        "Acoustics, bass, single-coil electrics, and humbucker electrics.",
+    },
+    {
+      label: "Amps",
+      details:
+        "MIG 50, Fender Vibro Champ Reverb, Monoprice 15-watt, Epiphone Valve Junior, and a 2x12 cab.",
+    },
+    {
+      label: "Outboard color",
+      details:
+        "A genuine rotating speaker, tube-powered spring reverb, and dozens of assorted pedals.",
+    },
+    {
+      label: "Amp modelling",
+      details: "Very familiar with amp modelling for flexible direct tones.",
+    },
+    {
+      label: "Monitoring",
+      details: "Mixing on LP-6 speakers.",
+    },
+    {
+      label: "Mics",
+      details: "Sennheiser e609, Warm Audio Fentone, and a stereo mic.",
+    },
+    {
+      label: "DAWs",
+      details:
+        "Logic, Ableton, and Pro Tools; lighter familiarity with FL Studio.",
+    },
   ],
   services: [
     "Guitar loops and starter ideas",

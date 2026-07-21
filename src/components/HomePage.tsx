@@ -26,7 +26,7 @@ function getPhotoImageClass(shape?: string) {
     case "portrait":
       return "aspect-[3/4]";
     case "landscape":
-      return "aspect-[2/1]";
+      return "aspect-[3/2]";
     case "wide":
     default:
       return "aspect-[4/3]";
@@ -118,9 +118,6 @@ export function HomePage() {
                   className="h-auto w-full max-w-full md:max-h-[640px] md:w-auto"
                 />
               </div>
-              <figcaption className="mt-3 text-sm text-[#6d5639]">
-                Will Moss / guitar parts from a small NYC room
-              </figcaption>
             </figure>
           </div>
         </div>
@@ -209,17 +206,24 @@ export function HomePage() {
         </div>
       </Section>
 
-      <Section eyebrow="Recording setup" title="Gear / recording setup">
-        <div className="max-w-3xl border-l-2 border-[#536845] pl-5">
+      <Section eyebrow="Recording setup" title="Gear + Recording">
+        <div className="max-w-4xl border-l-2 border-[#536845] pl-5">
           <p className="mb-5 leading-8 text-[#5a4f3f]">
             A simple remote session setup built around useful tones, clean stems,
             and parts that leave room for the song.
           </p>
-          <ul className="space-y-3 text-sm leading-6 text-[#4b4438]">
+          <dl className="grid gap-x-8 gap-y-5 sm:grid-cols-2">
             {siteContent.gear.map((item) => (
-              <li key={item}>- {item}</li>
+              <div key={item.label} className="border-t border-[#cfc0a6] pt-3">
+                <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-[#6d5639]">
+                  {item.label}
+                </dt>
+                <dd className="mt-2 text-sm leading-6 text-[#4b4438]">
+                  {item.details}
+                </dd>
+              </div>
             ))}
-          </ul>
+          </dl>
         </div>
       </Section>
 
